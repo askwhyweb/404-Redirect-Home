@@ -1,0 +1,22 @@
+{
+    "name": "orvisoft/module-redirect",
+    "description": "This module overrides 404 page with 301 permanent redirect to homepage in Magento which is sometime required by SEO team to remove URLs",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Farhan Islam",
+            "email": "farhan@orvisoft.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "OrviSoft\\Redirect\\": ""
+        }
+    }
+}

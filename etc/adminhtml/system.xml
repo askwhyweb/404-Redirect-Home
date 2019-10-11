@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="web" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label">
+			<label>Web</label>
+			<tab>general</tab>
+			<resource>OrviSoft_Redirect::config_orvisoft_redirect</resource>
+			<group id="options" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label">
+				<label>Default SEO Redirects (Custom)</label>
+				<field id="status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Status</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="redirect_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Redirect URL</label>
+					<comment/>
+					<depends>
+						<field id="web/options/status">1</field>
+					</depends>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
